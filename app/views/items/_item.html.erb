@@ -1,11 +1,11 @@
-<div class="grid place-items-center pt-12" id="<%= dom_id item %>">
-  
+<div class="grid place-items-center pt-12 px-6 " id="<%= dom_id item %>">
+ <div class ="px-8 py-8 bg-white drop-shadow-md rounded-2xl"> 
   <p class="font-bold text-3xl">
     
     <%= item.name %>
   </p>
 
-  <p>
+   <p>
     
     <%= image_tag item.image_video.variant (:image) %>
   </p>
@@ -13,7 +13,7 @@
 
 
   <p>
-    <strong>Price:</strong>
+    <strong>&#8358;</strong>
     <%= item.price %>
   </p>
 
@@ -32,6 +32,11 @@
     <%= item.description %>
   </p>
 
+      <p class ="text-button-color">
+      <%= link_to "Show this item", item  %>
+    </p>
+
+</div>
 
 
 </div>
