@@ -1,35 +1,62 @@
+<nav class="justify-center">
 
-<ul class = "flex justify-center gap-12  bg-white drop-shadow-md  pb-4 pt-4 ">
-<li>
-  <p class="text-2xl font-black"> Sell</p>
-  <p class="text-4xl font-black text-button-color"> Smart</p>
-</li>
+<div class=" 
+  bg-white 
+ drop-shadow-md 
+  py-4
+">
 
-<li class = "mt-4">   
+
+<div class=" items-start  pl-16  invisible lg:visible">
+ <p class="text-xl relative  ">
+   Sell
+   <span class="text-2xl absolute top-4 left-0 font-black text-button-color">Smart</span>
+ </p>
+</div>
+
+
+<div class="flex md:justify-end flex-wrap justify-center gap-6  md:gap-20 pr-2  md:pr-16 ">
+
+
+
   <%= form_with(url: items_path, method: :get, data: {turbo_frame: "items"}) do |form| %>
      
-  <div class=" space-x-3">
+  <div class=" pl-2">
   <%= form.text_field :query, placeholder:"search for used item near you!", class: 
-  "py-3 px-4 h-10  focus:ring-0 rounded-full 
-  bg-white stroke-white border-none hover:drop-shadow-xl drop-shadow-md" %>
+  "py-2
+  
+  h-10 
+  w-64
+  md:w-96
+  
+  focus:ring-0 
+  rounded-full 
+  bg-white 
+  stroke-white 
+  border-button-color
+   hover:drop-shadow-xl
+   drop-shadow-md" %>
 
   <% end %>
-</li>
 
-<li class = "mt-4 pt-1">
-  <%= render "darkmode_button/darkmode_toggle" %>
-</li>
-
-<li class = "stroke-button-color stroke-2 mt-4 pt-2  ">
-  <%= link_to "+ Sell", new_item_path, class:"bg-black text-white font-bold p-1 
-    pr-2 pr-4 pl-4 rounded-4xl  border-solid border-2 border-button-color 
-    drop-shadow-xl hover:drop-shadow-2xl rounded-md " %>
-</li>
+</div>
 
 
-<li class = "mt-4">
+<div class="w-5" >
+<%= render "darkmode_button/darkmode_toggle" %>
+</div>
+
+
+<div class = "stroke-button-color stroke-2  pt-2">
+  <%= link_to "+ Sell", new_item_path, class:"bg-black text-white font-bold  
+    px-4 p-1 rounded-4xl  border-solid border-2 border-button-color 
+    drop-shadow-md hover:drop-shadow-xl  w-2  h-0.5 rounded-md " %>
+</div>
+
+
+<div class="w-10">
 <%= image_tag ("account.png")%>
-</li>
+</div>
 
-</ul>
 
+</nav>
