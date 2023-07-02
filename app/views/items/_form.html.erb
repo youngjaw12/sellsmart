@@ -1,3 +1,7 @@
+
+<div class=" pt-4 grid place-items-center mb-16">
+<div class="px-8 py-8 bg-white drop-shadow-md rounded-2xl">
+
 <%= form_with(model: item) do |form| %>
   <% if item.errors.any? %>
     <div style="color: red">
@@ -11,37 +15,58 @@
     </div>
   <% end %>
 
+<div>
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <p class=" font-bold"> Name:</p>
+    <%= form.text_field :name,  class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-4" %>
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
+    <p class=" font-bold"> Price:</p>
+    <%= form.number_field :price, class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-4" %>
   </div>
 
   <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+    <p class=" font-bold"> Location:</p>
+    <%= form.text_field :location, class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-4" %>
   </div>
 
   <div>
-    <%= form.label :condition, style: "display: block" %>
-    <%= form.text_field :condition %>
+    <p class=" font-bold">Condition:</p>
+    <%= form.text_field :condition, class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-4"%>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <p class=" font-bold"> Description:</p>
+    <%= form.text_area :description, class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-4 pb-14 pr-14"%>
   </div>
 
   <div>
-    <%= form.label :image_video, style: "display: block" %>
+   
     <%= form.file_field :image_video %>
   </div>
-
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create item" , class:"bg-black text-white items-center cursor-pointer 
+    py-2 px-28 rounded-md mt-4
+    drop-shadow-md border-solid border-2 border-button-color hover:drop-shadow-xl font-bold"%>
   </div>
+
 <% end %>
+</div>
+</div>
+</div>

@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
+<div class="font-bold text-lg  pl-8 md:pl-16 drop-shadow-xl mt-4">
+<%= link_to "< Back to items", items_path %>
+</div>
 <%= render @item %>
-
+ 
 <div>
   <%= link_to "Edit this item", edit_item_path(@item) %> |
-  <%= link_to "Back to items", items_path %>
+  
 
   <%= button_to "Destroy this item", @item, method: :delete %>
 </div>

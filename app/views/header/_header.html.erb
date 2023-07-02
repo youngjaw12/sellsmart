@@ -15,24 +15,25 @@
 </div>
 
 
-<div class="flex md:justify-end flex-wrap justify-center gap-6  md:gap-20 pr-2  md:pr-16 ">
+<div class="flex md:justify-end flex-wrap justify-center gap-6  md:gap-20 pr-2  md:pr-28">
 
 
 
   <%= form_with(url: items_path, method: :get, data: {turbo_frame: "items"}) do |form| %>
      
   <div class=" pl-2">
-  <%= form.text_field :query, placeholder:"search for used item near you!", class: 
+  <%= form.text_field :query, placeholder:"  search for used item near you!", class: 
   "py-2
-  
+  text-sm
   h-10 
-  w-64
+  w-50
   md:w-96
   
   focus:ring-0 
   rounded-full 
   bg-white 
   stroke-white 
+  border-2
   border-button-color
    hover:drop-shadow-xl
    drop-shadow-md" %>
@@ -42,7 +43,7 @@
 </div>
 
 
-<div class="w-5" >
+<div class="w-5 hidden" >
 <%= render "darkmode_button/darkmode_toggle" %>
 </div>
 
@@ -54,8 +55,10 @@
 </div>
 
 
-<div class="w-10">
-<%= image_tag ("account.png")%>
+<div>
+<%=link_to new_user_registration_path do %>
+ <%= image_tag ("account1.png"), class:"w-8 drop-shadow-md hover:drop-shadow-xl "%>
+<% end %>
 </div>
 
 

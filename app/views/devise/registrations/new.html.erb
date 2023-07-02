@@ -1,29 +1,48 @@
-<h2>Sign up</h2>
+
+
+
+<div class="p-12 pt-16 grid place-items-center ">
+<div class="px-8 py-8 bg-white drop-shadow-md rounded-2xl">
+<h2 class="font-bold text-3xl pb-3 ">Create your account </h2>
+<p class="  pb-6">and you will be able to start <br>posting your items for <span class="font-bold">free!</span> </p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field ">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100", placeholder:"Email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em><% @minimum_password_length %> </em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password" , class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-5", placeholder:"password(6 characters minimum)"%>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" , class:"
+    rounded-md border-white focus:outline-none placeholder:italic placeholder:text-slate-400
+    focus:border-button-color focus:ring-sky-500 focus:ring-1
+    focus:ring-button-color border-2 bg-slate-100 mb-2", placeholder:"confirm password"%>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions mt-4 mb-2">
+    <%= f.submit "Sign up", class:"bg-black text-white items-center cursor-pointer 
+    py-2 px-28 rounded-md
+    drop-shadow-md border-solid border-2 border-button-color hover:drop-shadow-xl font-bold" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

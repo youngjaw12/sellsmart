@@ -1,10 +1,9 @@
-<h1>Editing item</h1>
+<div class="pt-8 place-items-center  flex justify-center gap-12">
+ <%= link_to "Back to items", items_path %> 
+<h1 class="font-bold text-3xl">Editing item</h1>
+ <%= link_to "Show this item", @item %> 
+</div>
 
 <%= render "form", item: @item %>
 
-<br>
 
-<div>
-  <%= link_to "Show this item", @item %> |
-  <%= link_to "Back to items", items_path %>
-</div>
