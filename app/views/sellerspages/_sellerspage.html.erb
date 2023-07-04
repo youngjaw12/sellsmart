@@ -1,0 +1,37 @@
+<div id="<%= dom_id sellerspage %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Sellers name:</strong>
+    <%= sellerspage.sellers_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone number:</strong>
+    <%= sellerspage.phone_number %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location:</strong>
+    <%= sellerspage.location %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Profile photo:</strong>
+    <%= sellerspage.profile_photo %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Page photo:</strong>
+    <%= sellerspage.page_photo %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Sellers bio:</strong>
+    <%= sellerspage.sellers_bio %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this sellerspage", sellerspage, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this sellerspage', edit_sellerspage_path(sellerspage), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

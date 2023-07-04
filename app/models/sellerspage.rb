@@ -1,0 +1,2 @@
+class Sellerspage < ApplicationRecord
+end
