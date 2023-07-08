@@ -13,10 +13,19 @@
   </head>
 
   <body  class="bg-slate-100">
+
+
       <%= render "header/header" %>
       <div>
-      <p class="grid place-items-center 
+      <% if notice %>
+        <p class=" grid place-items-center 
        text-button-color"><%= notice %></p>
+      <% end %>
+     <% if alert %>
+       <p class="grid place-items-center 
+       text-button-color"><%= alert %></p>
+      <% end %>
+    
       </div>
     <main class="">
       
