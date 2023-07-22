@@ -15,18 +15,18 @@
 </div>
 
 
-<div class="flex md:justify-end flex-wrap justify-center gap-6  md:gap-20 pr-2  md:pr-28">
+<div class="flex md:justify-end flex-wrap justify-center  md:gap-20  md:pr-28">
 
 
 
   <%= form_with(url: items_path, method: :get, data: {turbo_frame: "items"}) do |form| %>
      
-  <div class=" pl-2">
+  <div class="pr-2" >
   <%= form.text_field :query, placeholder:"  search for used item near you!", class: 
   "py-2
   text-sm
-  h-10 
-  w-50
+  h-6
+  w-10
   md:w-96
   
   focus:ring-0 
@@ -48,9 +48,9 @@
 </div>
 
 
-<div class = "stroke-button-color stroke-2  pt-2">
+<div class = "stroke-button-color stroke-2  pt-2 pr-2">
   <%= link_to "+ Sell", new_item_path, class:"bg-black text-white font-bold  
-    px-4 p-1 rounded-4xl  border-solid border-2 border-button-color 
+    px-2 p-1 rounded-4xl  border-solid border-2 border-button-color 
     drop-shadow-md hover:drop-shadow-xl  w-2  h-0.5 rounded-md " %>
 </div>
 
@@ -74,6 +74,6 @@
   <div><%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete },  class: "bg-button-color text-white border-2 border-cyan-400"  %></div>
 
 <%else%>
-<p><%=link_to "Create Your Account", new_user_registration_path, class:"font-bold text-xl"%> to start selling for FREE!</p>
+<%=link_to "", new_user_registration_path%> 
 <%end%>
 </div>
